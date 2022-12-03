@@ -3,32 +3,27 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
-  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  background-image: linear-gradient(75deg, #8bc0ee 0%, #c0e777 100%);
   text-align: center;
-  font-size: 18;
-  font-weight: 600;
-  background-color: rgb(143, 188, 151);
 }
-
-#search-box {
+.search-form {
+  text-align: center;
+}
+.input {
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
-  background-color: rgb(100, 205, 170);
-  border-color: rgb(6, 139, 79);
+  background-color: #a5ffe571;
+  border-color: rgba(8, 6, 139, 0.449);
 }
-#search-box:focus {
+.input:focus {
   border-color: rgb(204, 210, 32);
   outline: rgb(204, 210, 32);
-  color: rgb(2, 63, 21);
-  font-size: 18;
+
+  font: inherit;
 }
 
 ul {
@@ -38,27 +33,62 @@ li {
   list-style-type: none;
 }
 
-.country-list {
+.gallery {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 500px;
+
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 40px;
 }
 
-.country-list__item {
+.photo-card {
+  flex-basis: calc((100% - 120px) / 4);
+
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: unset;
+  object-fit: cover;
+}
+
+.info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-around;
 }
 
-.country-list__name {
-  display: inline-block;
-  color: rgb(2, 63, 21);
+.info-item {
+  text-align: center;
+  font-size: 10px;
+  padding: 2px;
+  margin: 0px;
 }
-
-.country-info {
-  margin: 0 auto;
-  text-align: left;
-  max-width: 500px;
-  color: rgb(2, 63, 21);
+.load-more,
+.btn {
+  font: inherit;
+  padding: 8px;
+  margin-bottom: 16px;
+  background-color: #a5ffe171;
+  border-color: rgba(8, 6, 139, 0.449);
+  border-radius: 5px;
+}
+.load-more:hover,
+.load-more:focus,
+.btn:hover,
+.btn:focus {
+  border-color: rgb(204, 210, 32);
+  background-color: #c0e777;
+}
+.load-more.is-hidden {
+  display: none;
 }
